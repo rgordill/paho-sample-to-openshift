@@ -6,7 +6,7 @@
 JAVA_HOME=/home/rgordill/Clients/java/jdk1.7.0_80-x64
 SERVERNAME=demo-mqtt-0-svc-rte-my-namespace.apps.my-domain.com
 
-openssl s_client -showcerts -servername ${SERVERNAME} -connect ${SERVERNAME} < /dev/null | awk '/BEGIN/,/END/{ if(/BEGIN/){a++}; out="cert"a".crt"; print >out}' 
+openssl s_client -showcerts -servername ${SERVERNAME} -connect ${SERVERNAME}:443 < /dev/null | awk '/BEGIN/,/END/{ if(/BEGIN/){a++}; out="cert"a".crt"; print >out}' 
 
 export PATH=${JAVA_HOME}/bin:$PATH
 

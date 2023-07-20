@@ -16,5 +16,13 @@ export PATH=$JAVA_HOME/jre/bin:$PATH
 java -version
 java -jar -Djavax.net.debug=all target/paho-sample-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-# Only for SunJSSE
-#java -jar -Djavax.net.debug=all -Djavax.net.ssl.keyStore=src/main/resources/certs/server.jks -Djavax.net.ssl.keyStorePassword=changeit -Djavax.net.ssl.trustStore=src/main/resources/certs/server.jks -Djavax.net.ssl.trustStorePassword=changeit target/paho-sample-1.0-SNAPSHOT-jar-with-dependencies.jar
+# Only for SunJSSE >= 7u95
+# java -jar \
+#   -Djdk.tls.client.protocols=TLSv1.2 \
+#   -Djsse.enableSNIExtension=true \
+#   -Djavax.net.debug=all \
+#   -Djavax.net.ssl.keyStore=src/main/resources/certs/server.jks \
+#   -Djavax.net.ssl.keyStorePassword=changeit \
+#   -Djavax.net.ssl.trustStore=src/main/resources/certs/server.jks \
+#   -Djavax.net.ssl.trustStorePassword=changeit \
+#   target/paho-sample-1.0-SNAPSHOT-jar-with-dependencies.jar
