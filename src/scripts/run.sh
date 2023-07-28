@@ -9,12 +9,16 @@
 export JAVA_HOME=/home/rgordill/Clients/java/jdk1.7.0_80-x64
 export PATH=$JAVA_HOME/jre/bin:$PATH
 
-#export JAVA_HOME=/usr/lib/jvm/java-1.8.0
-#export JAVA_HOME=/usr/lib/jvm/java-17
-#export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=/usr/lib/jvm/java-1.8.0
+# export JAVA_HOME=/usr/lib/jvm/java-17
+# export PATH=$JAVA_HOME/bin:$PATH
 
 java -version
-java -jar -Djavax.net.debug=all target/paho-sample-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar \
+  -Djavax.net.debug=all \
+  target/paho-sample-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+# In case you want to modify logging
 
 # Only for SunJSSE >= 7u95
 # java -jar \
