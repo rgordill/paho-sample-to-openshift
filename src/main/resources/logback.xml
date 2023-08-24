@@ -6,7 +6,8 @@
     </encoder>
   </appender>
 
-  <logger name="org.eclipse.paho.client.mqttv3.internal" level="debug"/>
+  <!--logger name="org.eclipse.paho.client.mqttv3.internal" level="debug"/-->
+  <logger name="org.eclipse.paho.client.mqttv3.internal.ClientState" level="debug"/>
 
   <root level="info">
     <appender-ref ref="STDOUT" />

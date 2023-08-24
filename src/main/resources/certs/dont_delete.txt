@@ -1,0 +1,1 @@
+Needed for the cert.sh script to store the keystore in this folder
